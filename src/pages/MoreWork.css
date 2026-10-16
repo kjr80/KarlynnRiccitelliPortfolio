@@ -1,0 +1,115 @@
+.more-work-page {
+  max-width: var(--page-width);
+  padding: var(--space-6) 0 var(--space-7);
+}
+
+.more-work-kicker {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-trail);
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-2);
+}
+
+.more-work-title {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-2);
+}
+
+.more-work-sub {
+  color: var(--color-ink-soft);
+  max-width: 56ch;
+  margin-bottom: var(--space-6);
+}
+
+.postcard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-4);
+}
+
+.postcard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  border: 1px dashed var(--color-line);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color var(--dur-med) var(--ease-out), transform var(--dur-med) var(--ease-out);
+}
+
+.postcard:hover {
+  border-color: var(--color-trail);
+  border-style: solid;
+  transform: translateY(-2px);
+}
+
+.postcard-stamp {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.postcard-stamp-photo {
+  position: absolute;
+  inset: 3px;
+  border-radius: 2px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.28;
+  filter: sepia(0.35) saturate(0.7);
+  mix-blend-mode: multiply;
+}
+
+.postcard-stamp.is-unviewed .postcard-stamp-photo {
+  opacity: 0.14;
+}
+
+.postcard-stamp-frame {
+  position: relative;
+}
+
+.postcard-stamp-check {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
+  background: var(--color-surface);
+  border-radius: 50%;
+  padding: 2px;
+  box-shadow: 0 0 0 1.5px var(--color-surface);
+}
+
+.postcard-tag {
+  font-size: 0.6875rem;
+  color: var(--color-trail);
+  font-weight: 600;
+}
+
+.postcard-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  max-width: 22ch;
+  margin: 0;
+}
+
+.postcard-desc {
+  font-size: var(--fs-sm);
+  color: var(--color-ink-soft);
+}
+
+.postcard-link {
+  margin-top: auto;
+  padding-top: var(--space-2);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--color-stamp-ink);
+}

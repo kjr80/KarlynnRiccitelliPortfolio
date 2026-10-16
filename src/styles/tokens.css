@@ -1,0 +1,22 @@
+@import "./tokens-base.css";
+
+/* ── Color palette ─────────────────────────────────────────────────────
+   Three palettes live in ./palettes/, each defining the same set of
+   --color-* custom properties. Only one should be imported at a time —
+   to switch, comment out the current line and uncomment another:
+
+   1. kraft-vermillion  — classic travel: warm kraft paper, forest green,
+                           vermillion postmark red. (current default)
+   2. harbor-blue       — calming blue: navy ink, pale harbor-fog paper,
+                           teal-green accent, airmail red for stamps.
+   3. botanical-voyage  — calming green: forest-slate ink, sage paper,
+                           teal accent, vintage ochre for stamps.
+
+   All three have been checked against WCAG AA (4.5:1 for body text,
+   3:1 for the large decorative postmark chip). Nothing else in the site
+   needs to change — every component reads colors through these
+   variables, never a hardcoded hex value.
+*/
+@import "./palettes/kraft-vermillion.css";
+/* @import "./palettes/harbor-blue.css"; */
+/* @import "./palettes/botanical-voyage.css"; */

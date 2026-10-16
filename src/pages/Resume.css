@@ -1,0 +1,75 @@
+.resume-page {
+  max-width: var(--content-width);
+  padding: var(--space-6) 0 var(--space-7);
+}
+
+.resume-kicker {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-trail);
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-2);
+}
+
+.resume-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-2);
+}
+
+.resume-head h1 {
+  font-size: var(--fs-2xl);
+}
+
+.resume-download {
+  flex-shrink: 0;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-paper);
+  background: var(--color-ink);
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+
+.resume-download:hover {
+  background: var(--color-stamp-ink);
+}
+
+.resume-note {
+  color: var(--color-ink-soft);
+  font-size: var(--fs-sm);
+  margin-bottom: var(--space-4);
+}
+
+.resume-frame {
+  border: 1px solid var(--color-line-soft);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-surface);
+  height: 80vh;
+  min-height: 480px;
+}
+
+.resume-embed {
+  width: 100%;
+  height: 100%;
+}
+
+.resume-fallback {
+  padding: var(--space-5);
+  color: var(--color-ink-soft);
+}
+
+.resume-fallback a {
+  color: var(--color-trail);
+}
+
+@media (max-width: 560px) {
+  .resume-head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

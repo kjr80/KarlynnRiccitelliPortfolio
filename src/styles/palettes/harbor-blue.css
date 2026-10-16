@@ -1,0 +1,19 @@
+/* Palette 2 — "Harbor Blue": a calming blue base (deep navy ink, pale
+   harbor-fog paper) with a teal-green secondary accent and the classic
+   airmail red reserved for stamps and achievements — nautical rather than
+   overland. Every text/background pairing has been checked against WCAG
+   AA (4.5:1 for body text, 3:1 for the large decorative postmark chip). */
+:root {
+  --color-paper: #e7edee;       /* page background: pale harbor-fog blue */
+  --color-surface: #f3f7f8;     /* card/panel surface, lighter blue-white */
+  --color-ink: #1e2f3f;         /* primary text, deep navy */
+  --color-ink-soft: #4e6474;    /* secondary text, muted slate-blue */
+  --color-line: #c9d8dc;        /* hairline borders, on the paper */
+  --color-line-soft: #dce7e9;   /* lighter divider, on surface */
+  --color-stamp: #c1443a;       /* airmail red — achievement moments only */
+  --color-stamp-ink: #8a2f27;   /* darker red for stamp text/outline */
+  --color-trail: #2e6e63;       /* calming teal-green — progress trail marker/accents/links */
+  --color-trail-fill: #8fc0b4;  /* lighter teal — the filled portion of the trail bar, so the darker plane marker riding on top stays visible */
+  --color-trail-soft: #cfe3dd;  /* unfilled trail track */
+  --color-shadow: #1e2f3f;      /* base color for drop-shadows/overlays, tinted via color-mix() at point of use */
+}

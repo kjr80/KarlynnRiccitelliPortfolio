@@ -1,0 +1,46 @@
+.badge-toast {
+  position: fixed;
+  bottom: var(--space-5);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  background: var(--color-surface);
+  border: 1px solid var(--color-line-soft);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-5);
+  box-shadow: 0 16px 40px color-mix(in srgb, var(--color-shadow) 22%, transparent);
+  max-width: 360px;
+  pointer-events: none;
+}
+
+.badge-stamp {
+  flex-shrink: 0;
+}
+
+.badge-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.badge-eyebrow {
+  font-size: var(--fs-xs);
+  color: var(--color-stamp-ink);
+  font-weight: 600;
+}
+
+.badge-label {
+  font-family: var(--font-display);
+  font-size: var(--fs-base);
+  color: var(--color-ink);
+}
+
+@media (max-width: 480px) {
+  .badge-toast {
+    width: calc(100% - var(--space-5));
+    max-width: none;
+  }
+}

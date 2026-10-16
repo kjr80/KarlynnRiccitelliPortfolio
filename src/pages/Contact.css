@@ -1,0 +1,163 @@
+.contact-page {
+  max-width: var(--content-width);
+  padding: var(--space-6) 0 var(--space-7);
+}
+
+.contact-kicker {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-trail);
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-2);
+}
+
+.contact-title {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-5);
+}
+
+.boarding-pass {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line-soft);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 10px 30px color-mix(in srgb, var(--color-shadow) 12%, transparent);
+}
+
+.pass-main {
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.pass-stub {
+  position: relative;
+  background: var(--color-ink);
+  color: var(--color-paper);
+  padding: var(--space-5) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  border-left: 2px dashed color-mix(in srgb, var(--color-surface) 30%, transparent);
+}
+
+.pass-stub::before,
+.pass-stub::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--color-paper);
+}
+
+.pass-stub::before {
+  top: -10px;
+}
+
+.pass-stub::after {
+  bottom: -10px;
+}
+
+.pass-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.pass-field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pass-field--right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.pass-label {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--color-ink-soft);
+  letter-spacing: 0.02em;
+}
+
+.pass-stub .pass-label {
+  color: color-mix(in srgb, var(--color-surface) 60%, transparent);
+}
+
+.pass-value {
+  font-family: var(--font-display);
+  font-size: var(--fs-base);
+}
+
+.pass-value--lg {
+  font-size: var(--fs-xl);
+  letter-spacing: 0.03em;
+}
+
+.pass-link {
+  font-family: var(--font-body);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-trail);
+  text-decoration: none;
+}
+
+.pass-link:hover {
+  text-decoration: underline;
+}
+
+.pass-stub .pass-link {
+  color: var(--color-paper);
+  text-decoration: underline;
+  margin-top: var(--space-2);
+}
+
+.pass-plane {
+  flex-shrink: 0;
+  color: var(--color-stamp);
+  transform: rotate(45deg);
+}
+
+.pass-barcode {
+  height: 32px;
+  margin-top: var(--space-2);
+  background: repeating-linear-gradient(
+    90deg,
+    var(--color-paper) 0px,
+    var(--color-paper) 2px,
+    transparent 2px,
+    transparent 4px,
+    var(--color-paper) 4px,
+    var(--color-paper) 7px,
+    transparent 7px,
+    transparent 9px
+  );
+}
+
+@media (max-width: 640px) {
+  .boarding-pass {
+    grid-template-columns: 1fr;
+  }
+  .pass-stub {
+    border-left: none;
+    border-top: 2px dashed color-mix(in srgb, var(--color-shadow) 20%, transparent);
+  }
+  .pass-stub::before,
+  .pass-stub::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .pass-stub::before {
+    top: -10px;
+  }
+  .pass-stub::after {
+    bottom: -10px;
+  }
+}

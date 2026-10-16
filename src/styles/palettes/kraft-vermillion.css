@@ -1,0 +1,18 @@
+/* Palette 1 — "Kraft & Vermillion": the classic-travel palette (warm kraft
+   paper, forest green, vermillion postmark red). This is the default.
+   Every text/background pairing below has been checked against WCAG AA
+   (4.5:1 for body text, 3:1 for the large decorative postmark chip). */
+:root {
+  --color-paper: #ece3d0;       /* page background: warm kraft/parchment */
+  --color-surface: #f7f1e4;     /* card/panel surface, lighter parchment */
+  --color-ink: #24303d;         /* primary text, deep slate-navy */
+  --color-ink-soft: #56626d;    /* secondary text */
+  --color-line: #d8cbae;        /* hairline borders, on the paper */
+  --color-line-soft: #e3d8bf;   /* lighter divider, on surface */
+  --color-stamp: #c1443a;       /* vermillion stamp-ink red — achievement moments only */
+  --color-stamp-ink: #7c2c25;   /* darker red for stamp text/outline */
+  --color-trail: #3d6555;       /* forest green — progress trail marker/accents/links */
+  --color-trail-fill: #7fa693;  /* lighter green — the filled portion of the trail bar, so the darker plane marker riding on top stays visible */
+  --color-trail-soft: #cdd9c9;  /* unfilled trail track */
+  --color-shadow: #24303d;      /* base color for drop-shadows/overlays, tinted via color-mix() at point of use */
+}

@@ -1,0 +1,20 @@
+/* Palette 3 — "Botanical Voyage": a calming green base (sage-warm paper,
+   deep forest-slate ink) with a cooler teal secondary accent and a vintage
+   ochre/sepia stamp color, like ink from an old naturalist's expedition
+   journal rather than a postal red. Every text/background pairing has been
+   checked against WCAG AA (4.5:1 for body text, 3:1 for the large
+   decorative postmark chip). */
+:root {
+  --color-paper: #e9ece1;       /* page background: warm sage parchment */
+  --color-surface: #f4f6ef;     /* card/panel surface, lighter sage-white */
+  --color-ink: #22332b;         /* primary text, deep forest-slate */
+  --color-ink-soft: #54634f;    /* secondary text, muted moss */
+  --color-line: #d3dcc9;        /* hairline borders, on the paper */
+  --color-line-soft: #e1e8d8;   /* lighter divider, on surface */
+  --color-stamp: #b8622e;       /* vintage ochre — achievement moments only */
+  --color-stamp-ink: #7a4118;   /* darker sepia-brown for stamp text/outline */
+  --color-trail: #2e6663;       /* calming teal — progress trail marker/accents/links */
+  --color-trail-fill: #8fc2be;  /* lighter teal — the filled portion of the trail bar, so the darker plane marker riding on top stays visible */
+  --color-trail-soft: #d6e3d9;  /* unfilled trail track */
+  --color-shadow: #22332b;      /* base color for drop-shadows/overlays, tinted via color-mix() at point of use */
+}

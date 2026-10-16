@@ -1,0 +1,222 @@
+.passport-page {
+  max-width: var(--page-width);
+  padding: var(--space-6) 0 var(--space-7);
+}
+
+.passport-kicker {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--color-trail);
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-2);
+}
+
+.passport-title {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-2);
+}
+
+.passport-sub {
+  color: var(--color-ink-soft);
+  margin-bottom: var(--space-4);
+  max-width: 56ch;
+}
+
+.passport-more-link {
+  display: inline-block;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  color: var(--color-trail);
+  text-decoration: none;
+  margin-bottom: var(--space-6);
+}
+
+.passport-more-link:hover {
+  text-decoration: underline;
+}
+
+.stamp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: var(--space-5) var(--space-4);
+  max-width: 640px;
+}
+
+.stamp-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+  color: inherit;
+}
+
+.stamp-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 0.8;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-ink);
+  box-shadow: inset 0 0 0 3px var(--color-paper), inset 0 0 0 4.5px var(--color-line);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 10px 10px;
+  transition: transform var(--dur-med) var(--ease-out);
+}
+
+.stamp-item:hover .stamp-card {
+  transform: translateY(-3px) rotate(-1.2deg);
+}
+
+.stamp-card.is-empty {
+  border-style: dashed;
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+
+.stamp-photo {
+  position: absolute;
+  inset: 4.5px;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.22;
+  filter: sepia(0.35) saturate(0.7);
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.stamp-card.is-empty .stamp-photo {
+  opacity: 0.12;
+}
+
+.stamp-frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-ink);
+}
+
+.stamp-icon {
+  display: flex;
+  padding: 6px;
+  background: rgba(247, 241, 228, 0.78);
+  border-radius: 50%;
+}
+
+.stamp-denom {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  letter-spacing: 0.03em;
+  color: var(--color-ink-soft);
+}
+
+.postmark {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+.postmark--circle {
+  transform: rotate(-13deg);
+}
+
+.postmark--rect {
+  transform: rotate(7deg);
+}
+
+/* Perforation: small circles matching the page background, punched
+   along every edge, to read as a physical stamp edge. */
+.perf {
+  position: absolute;
+  pointer-events: none;
+}
+
+.perf-top,
+.perf-bottom {
+  left: 0;
+  right: 0;
+  height: 10px;
+  background-image: radial-gradient(circle 5px, var(--color-paper) 5px, transparent 5.5px);
+  background-size: 14px 10px;
+  background-repeat: repeat-x;
+  background-position: 3px center;
+}
+
+.perf-top {
+  top: -5px;
+}
+
+.perf-bottom {
+  bottom: -5px;
+}
+
+.perf-left,
+.perf-right {
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background-image: radial-gradient(circle 5px, var(--color-paper) 5px, transparent 5.5px);
+  background-size: 10px 14px;
+  background-repeat: repeat-y;
+  background-position: center 3px;
+}
+
+.perf-left {
+  left: -5px;
+}
+
+.perf-right {
+  right: -5px;
+}
+
+.stamp-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2px;
+}
+
+.stamp-tag {
+  font-size: 0.6875rem;
+  color: var(--color-trail);
+  font-weight: 600;
+}
+
+.stamp-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-sm);
+  max-width: 16ch;
+}
+
+.stamp-status {
+  font-size: 0.6875rem;
+  color: var(--color-ink-soft);
+}
+
+.is-empty ~ .stamp-caption .stamp-status,
+.stamp-item:has(.is-empty) .stamp-status {
+  font-style: italic;
+}
+
+.passport-complete-note {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-line);
+  color: var(--color-ink-soft);
+  max-width: 56ch;
+}
+
+.passport-complete-note a {
+  color: var(--color-trail);
+  text-decoration: underline;
+}

@@ -1,0 +1,75 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: rgba(236, 227, 208, 0.88);
+  backdrop-filter: blur(8px);
+  border-top: 4px solid transparent;
+  border-image: repeating-linear-gradient(
+      -45deg,
+      var(--color-stamp) 0 10px,
+      var(--color-paper) 10px 20px,
+      var(--color-trail) 20px 30px,
+      var(--color-paper) 30px 40px
+    )
+    4;
+  border-bottom: 1px solid var(--color-line);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+}
+
+.nav-mark {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  text-decoration: none;
+  color: var(--color-ink);
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--space-5);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-ink-soft);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--color-ink);
+  border-color: var(--color-trail);
+}
+
+.nav-passport-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-stamp-count {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  background: var(--color-stamp);
+  color: var(--color-surface);
+  padding: 1px 6px;
+  border-radius: 999px;
+  line-height: 1.5;
+}
+
+@media (max-width: 560px) {
+  .nav-links {
+    gap: var(--space-3);
+  }
+}

@@ -1,0 +1,35 @@
+.static-page {
+  max-width: var(--content-width);
+  padding: var(--space-6) 0 var(--space-7);
+}
+
+.static-page h1 {
+  font-size: var(--fs-2xl);
+  margin-bottom: var(--space-4);
+}
+
+.static-page h2 {
+  font-size: var(--fs-lg);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-3);
+}
+
+.static-page p {
+  color: var(--color-ink-soft);
+  margin-bottom: var(--space-4);
+  max-width: none;
+}
+
+.static-page ul {
+  color: var(--color-ink-soft);
+  padding-left: 1.2rem;
+}
+
+.static-page li {
+  margin-bottom: var(--space-2);
+}
+
+.static-page a {
+  color: var(--color-trail);
+  text-decoration: underline;
+}
